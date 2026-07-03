@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int n=sc.nextInt();
+        int c=0;
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int b=sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {         
+                int sum=0;      
+                for(int k=i;k<=j;k++)
+                {
+                   sum+=arr[k]; 
+                }
+                if(sum<b)
+                {
+                    c++;
+                }
+            }
+        }
+        System.out.print(c);
+        
+        
+        
+    }
+}
